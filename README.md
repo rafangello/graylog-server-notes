@@ -55,4 +55,4 @@ sudo keytool -importcert -keystore /usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib
 (Default password: changeit)
 
 
-![](tls-graylog.png)
+![](graylog-tls.png)
