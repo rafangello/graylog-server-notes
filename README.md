@@ -1,5 +1,4 @@
-# Graylog Setup
-Sharing some notes about graylog server setup...
+# Graylog Setup Notes
 
 ![](graylog-server.png)
 
@@ -18,6 +17,7 @@ sudo apt install elasticsearch
 
 
 sudo systemctl start elasticsearch
+
 sudo systemctl enable elasticsearch
  
 ## Install MongoDB
@@ -51,6 +51,7 @@ vi openssl-graylog.cnf
 openssl req -x509 -days 365 -nodes -newkey rsa:2048 -config openssl-graylog.cnf -keyout pkcs5-plain.pem -out cert.pem
 
 * Add certificate to JVM trusted CA
+
 sudo keytool -importcert -keystore /usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/security/cacerts -alias graylog-self-signed -file /DATA/graylog/cert.pem 
 (Default password: changeit)
 
